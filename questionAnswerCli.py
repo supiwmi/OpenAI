@@ -1,4 +1,9 @@
 #!/usr/bin/env python3
+
+"""
+An OpenAI api key is required to use this script.
+This uses and advanced GPT-3 model with AI vai Github Copilot to write this command-line interface. 
+"""
 import os
 import openai
 import click

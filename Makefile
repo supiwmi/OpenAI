@@ -1,5 +1,5 @@
 install: 
-	pip install --upgrde pip &&\
+	pip install --upgrade pip &&\
 		pip install -r requirement.txt
 	
 test:

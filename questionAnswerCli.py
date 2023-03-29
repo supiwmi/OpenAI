@@ -8,6 +8,7 @@ import os
 import openai
 import click
 
+
 def submit_question(text):
     """This submits a question to the OpenAI API"""
     openai.api_key = os.getenv("OPENAI_API_KEY")
@@ -22,18 +23,20 @@ def submit_question(text):
         presence_penalty=0,
         model="text-davinci-003",
     )["choices"][0]["text"].strip(" \n")
-    return (result)
+    return result
 
-#write a main function that invokes submit_question functions and print the result
+
+# write a main function that invokes submit_question functions and print the result
 @click.command()
-@click.argument('text')
+@click.argument("text")
 def main(text):
     """This is the main function that you ask the OpenAI API a question to get an answer
 
-    example: python questionAnswerCli.py "Who won the 2020 Summer Olympics
-    
+    Example: ./questionAnswerCli "Who won the 2020 Summer Olympics?"
+
     """
     print(submit_question(text))
+
 
 if __name__ == "__main__":
     main()

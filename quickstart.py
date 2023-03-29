@@ -1,8 +1,9 @@
 import os
 import openai
 
+#animal = """Suggest three names for the top fiction movies.
 animal = """Suggest three names for an animal that is a superhero.
-
+    
 Animal: Cat
 Names: Captain Sharpclaw, Agent Fluffball, The Incredible Feline
 Animal: Dog
@@ -18,5 +19,5 @@ response = openai.Completion.create(
             temperature=0.6,
 )
 
-#print(response["choices"][0]["text"])
-print(response)
+print(response["choices"][0]["text"])
+#print(response)

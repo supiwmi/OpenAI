@@ -1,9 +1,10 @@
 install: 
 	pip install --upgrade pip &&\
-		pip install -r requirement.txt
+		pip install openai &&\
+			pip install -r requirement.txt
 	
 test:
-	python -m pytest -vv test_quickstart.pytest
+	python -m pytest -vv quickstart.py
 
 format:
 	black *.py

@@ -9,6 +9,6 @@ format:
 	black *.py
 
 lint:
-	pylint --eisable=R,C test_quickstart.py
+	pylint --disable=R,C quickstart.py
 
 all: install lint test
